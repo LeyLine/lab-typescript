@@ -6,11 +6,12 @@ let myList: Array<string> = [];
 
 function addTask(task) {
   myList.push(task);
+  return myList.length;
 }
 
 // 3. Create a function to list all tasks, it must show in the console de task.
 function listAllTasks() {
-  return myList;
+  console.log(myList);
 }
 // 4. Create a function to delete a task, you must find the task inside the array and delete it.
 function deleteTask(num) {

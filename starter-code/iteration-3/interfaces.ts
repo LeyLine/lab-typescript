@@ -11,15 +11,16 @@
 // - Method for delete a task where will receive an instance of TodoItem, doesn't return anything.
 // - Method for show all tasks that are not yet done, doesn't return anything.
 
-interface listItem {
-  taskTitle: string;
-  taskStatus: boolean;
+export interface TodoItemInterface {
+  title: string;
+  status: boolean;
   updatedAt: Date;
-  toggleStatus(): boolean;
+  toggleStatus(): void;
 }
 
-interface todoList {
-list: Array<string>;
-
-
+export interface TodoListInterface {
+  TodoItems: Array<string>;
+  addTask(TodoItem): number;
+  listAllTasks(): void;
+  deleteTask(TodoItem): number;
 }

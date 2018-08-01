@@ -1,8 +1,16 @@
-let task1 = new TodoItem('This is our first task');
-let task2 = new TodoItem('Eat pizza 🍕 yummy!!!');
-let task3 = new TodoItem('Finish this iteration 1!! 🤓');
-let task4 = new TodoItem('Finish this iteration 2!! 🤓');
-let task5 = new TodoItem('Finish this iteration 3!! 🤓');
+class TodoItem {
+    constructor(title, updatedAt) {
+        this.title = title;
+        this.updatedAt = updatedAt;
+    }
+    toggleStatus() {
+    }
+}
+let task1 = new TodoItem("This is our first task");
+let task2 = new TodoItem("Eat pizza 🍕 yummy!!!");
+let task3 = new TodoItem("Finish this iteration 1!! 🤓");
+let task4 = new TodoItem("Finish this iteration 2!! 🤓");
+let task5 = new TodoItem("Finish this iteration 3!! 🤓");
 let myTodos = new TodoList();
 console.log("Number of items:", myTodos.addTask(task1));
 console.log("Number of items:", myTodos.addTask(task2));

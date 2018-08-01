@@ -1,5 +1,7 @@
 // Add the reference to the "TodoInterface"
 
+import { TodoInter } from "./todoInterface";
+
 // 1. Create a class Todo that implements the Interface created before.
 class Todo implements TodoInter {
   list: Array<string> = [];
@@ -21,7 +23,7 @@ class Todo implements TodoInter {
 }
 
 // Execution
-myTodos = new Todo();
+let myTodos = new Todo();
 console.log("Number of items:", myTodos.addTask("This is our first task"));
 console.log("Number of items:", myTodos.addTask("Eat pizza 🍕 yummy!!!"));
 console.log(

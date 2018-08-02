@@ -20,7 +20,7 @@ export interface TodoItemInterface {
 
 export interface TodoListInterface {
   TodoItems: Array<string>;
-  addTask(TodoItem): number;
+  addTask(TodoItem): void;
   listAllTasks(): void;
   deleteTask(TodoItem): number;
 }

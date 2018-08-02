@@ -1,9 +1,34 @@
 class TodoItem {
-    constructor(title, updatedAt) {
+    constructor(title) {
         this.title = title;
-        this.updatedAt = updatedAt;
+        this.status = false;
+        this.updatedAt = new Date();
     }
     toggleStatus() {
+        if (this.status == false) {
+            this.status = true;
+        }
+        else {
+            this.status == true;
+        }
+    }
+}
+class TodoList {
+    constructor() {
+        this.TodoItems = [];
+    }
+    addTask(TodoItem) {
+        this.TodoItems.push(TodoItem);
+    }
+    listAllTasks() {
+        this.TodoItems.forEach(element => {
+            console.log(element.title);
+        });
+    }
+    deleteTask(TodoItem) {
+        let place = this.TodoItems.indexOf(TodoItem);
+        this.TodoItems.splice(place, 1);
+        return this.TodoItems.length;
     }
 }
 let task1 = new TodoItem("This is our first task");
@@ -21,4 +46,3 @@ myTodos.listAllTasks();
 console.log("Number of items:", myTodos.deleteTask(task3));
 console.log("Number of items:", myTodos.deleteTask(task4));
 console.log("Number of items:", myTodos.deleteTask(task5));
-myTodos.listUncomplete();
